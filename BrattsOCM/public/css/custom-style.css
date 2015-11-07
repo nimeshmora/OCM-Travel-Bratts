@@ -1,0 +1,29 @@
+/*================================================================================
+	Item Name: Materialize - Material Design Admin Template
+	Version: 2.1
+	Author: GeeksLabs
+	Author URL: http://www.themeforest.net/user/geekslabs
+================================================================================
+
+NOTE:
+------
+PLACE HERE YOUR OWN CSS CODES AND IF NEEDED, OVERRIDE THE STYLES FROM THE OTHER STYLESHEETS.
+WE WILL RELEASE FUTURE UPDATES SO IN ORDER TO NOT OVERWRITE YOUR STYLES IT'S BETTER LIKE THIS.  */
+
+.top-buffer{
+
+    margin-top: 25px;
+}
+
+.right-buffer{
+    margin-right: 25px;
+}
+
+.left-buffer{
+    margin-left: 25px;
+}
+
+.company-reg-div{
+
+    width: 500px  ;
+}

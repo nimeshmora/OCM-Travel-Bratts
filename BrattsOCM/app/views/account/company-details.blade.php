@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--================================================================================
+Item Name: Materialize - Material Design Admin Template
+Version: 2.1
+Author: GeeksLabs
+Author URL: http://www.themeforest.net/user/geekslabs
+================================================================================ -->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="description"
+          content="Materialize is a Material Design Admin Template,It's modern, responsive and based on Material Design by Google. ">
+    <meta name="keywords"
+          content="materialize, admin template, dashboard template, flat admin template, responsive admin template,">
+    <title>Register Page|TravelBratts</title>
+    <!-- Favicons-->
+    <link rel="icon" href="{{ URL::asset('images/favicon/32x32.png') }}" sizes="32x32">
+    <!-- Favicons-->
+    <link rel="apple-touch-icon-precomposed" href="{{ URL::asset('images/favicon/apple-touch-icon-152x152.png') }}">
+    <!-- For iPhone -->
+    <meta name="msapplication-TileColor" content="#00bcd4">
+    <meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png">
+    <!-- For Windows Phone -->
+    <!-- CORE CSS-->
+    <link href="{{ URL::asset('css/materialize.css') }}" type="text/css" rel="stylesheet" media="screen,projection">
+    <link href="{{ URL::asset('css/style.css') }}" type="text/css" rel="stylesheet" media="screen,projection">
+    <!-- Custome CSS-->
+    <link href="{{ URL::asset('css/custom-style.css') }}" type="text/css" rel="stylesheet" media="screen,projection">
+    <link href="{{ URL::asset('css/page-center.css') }}" type="text/css" rel="stylesheet" media="screen,projection">
+    <!-- INCLUDED PLUGIN CSS ON THIS PAGE -->
+    <link href="{{ URL::asset('css/prism.css') }}" type="text/css" rel="stylesheet" media="screen,projection">
+    <link href="{{ URL::asset('js/plugins/perfect-scrollbar/perfect-scrollbar.css') }}" type="text/css" rel="stylesheet"
+          media="screen,projection">
+</head>
+<body class="cyan">
+<!-- Start Page Loading -->
+<div id="loader-wrapper">
+    <div id="loader"></div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+</div>
+<!-- End Page Loading -->
+<div id="login-page" class="row">
+    <div class="col s12 z-depth-4 card-panel company-reg-div">
+        <form class="login-form company-reg-div" action="{{ URL::route('comapny-register-post') }}" method="post">
+            <div class="row">
+                <div class="input-field col s12 center">
+                    <p class="center">Company Details!</p>
+
+                    <div class="">
+                        <img src="images/u.png">
+                    </div>
+                </div>
+            </div>
+            <div class="row margin">
+                <div class="input-field col s12">
+                    <i class="mdi-social-domain prefix"></i>
+                    <input name="companyname"
+                           type="text" {{ (Input::old('companyname')) ? 'value="'. Input::old('companyname').'"' : '' }}>
+
+                    @if($errors ->has('companyname'))
+
+                        {{ $errors->first('companyname', '<small class=error>:message</small>') }}
+                    @endif
+                    <label for="companyname" class="center-align">Company Name</label>
+
+                </div>
+
+                <div class="row margin">
+                    <div class="input-field col s12">
+                        <i class="mdi-social-domain prefix"></i>
+                        <input name="about"
+                               type="text" {{ (Input::old('about')) ? 'value="'. Input::old('about').'"' : '' }}>
+
+                        @if($errors ->has('about'))
+
+                            {{ $errors->first('about', '<small class=error>:message</small>') }}
+                        @endif
+                        <label for="about" class="center-align">About</label>
+
+                    </div>
+            </div>
+
+            <div class="row margin">
+                <div class="input-field col s12">
+                    <i class="mdi-social-person-outline prefix"></i>
+                    <input name="admin"
+                           type="text" {{ (Input::old('admin')) ? 'value="'. Input::old('admin').'"' : '' }}>
+
+                    @if($errors ->has('admin'))
+
+                        {{ $errors->first('admin', '<small class=error>:message</small>') }}
+                    @endif
+                    <label for="city" class="center-align">Admin</label>
+
+                </div>
+            </div>
+
+            <div class="row margin">
+                <div class="input-field col s12">
+                    <i class="mdi-action-language prefix"></i>
+                    <input name="companycountry"
+                           type="text" {{ (Input::old('companycountry')) ? 'value="'. Input::old('companycountry').'"' : '' }}>
+
+                    @if($errors ->has('companycountry'))
+
+                        {{ $errors->first('companycountry', '<small class=error>:message</small>') }}
+                    @endif
+                    <label for="companycountry" class="center-align">Country</label>
+
+                </div>
+                </div>
+
+            <div class="row margin">
+                <div class="input-field col s12">
+                    <i class="mdi-content-markunread prefix"></i>
+                    <input name="companyaddress"
+                           type="text" {{ (Input::old('companyaddress')) ? 'value="'. Input::old('companyaddress').'"' : '' }}>
+
+                    @if($errors ->has('companyaddress'))
+
+                        {{ $errors->first('companyaddress', '<small class=error>:message</small>') }}
+                    @endif
+                    <label for="companyaddress" class="center-align">Address</label>
+
+                </div>
+                </div>
+            <div class="row margin">
+                <div class="input-field col s12">
+                    <i class="mdi-action-room prefix"></i>
+                    <input name="city"
+                           type="text" {{ (Input::old('city')) ? 'value="'. Input::old('city').'"' : '' }}>
+
+                    @if($errors ->has('city'))
+
+                        {{ $errors->first('city', '<small class=error>:message</small>') }}
+                    @endif
+                    <label for="city" class="center-align">City</label>
+
+                </div>
+            </div>
+
+            <div class="row margin">
+                <div class="input-field col s12">
+                    <i class="mdi-action-credit-card prefix"></i>
+                    <input name="tax"
+                           type="number" {{ (Input::old('tax')) ? 'value="'. Input::old('tax').'"' : '' }}>
+
+                    @if($errors ->has('tax'))
+
+                        {{ $errors->first('tax', '<small class=error>:message</small>') }}
+                    @endif
+                    <label for="city" class="center-align">Tax</label>
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <button type="submit" class="btn waves-effect waves-light col s12">Register Now</button>
+                    {{ Form::token() }}
+                </div>
+                <div class="input-field col s12">
+                    <p class="margin center medium-small sign-up" onclick="window.location='{{  url("user-login") }}'">
+                        Already have an account? <a>Login</a></p>
+                </div>
+            </div>
+            </div>
+        </form>
+
+    </div>
+</div>
+<!-- ================================================
+Scripts
+================================================ -->
+<!-- jQuery Library -->
+<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+<!--materialize js-->
+<script type="text/javascript" src="js/materialize.js"></script>
+<!--prism-->
+<script type="text/javascript" src="js/prism.js"></script>
+<!--scrollbar-->
+<script type="text/javascript" src="js/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+<!--plugins.js - Some Specific JS codes for Plugin Settings-->
+<script type="text/javascript" src="js/plugins.js"></script>
+</body>
+</html>
